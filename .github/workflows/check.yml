@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v6
       - run: bash check.sh
       - run: |
-          git config user.name "bot"
-          git config user.email "bot@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add state.txt blocks.log
           git diff --cached --quiet || (git commit -m "update" && git push)
