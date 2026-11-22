@@ -25,6 +25,6 @@ grep -Fxf own.txt blocked.txt | sort -u > now.txt || true
 
 touch state.txt blocks.log
 TS=$(date -u +%FT%TZ)
-comm -13 state.txt now.txt | sed "s/^/$TS INCLUIDA /" >> blocks.log
-comm -23 state.txt now.txt | sed "s/^/$TS DEJA_DE_ESTAR /" >> blocks.log
+comm -13 state.txt now.txt | sed "s/^/$TS BLOQUEADA /" >> blocks.log
+comm -23 state.txt now.txt | sed "s/^/$TS DESBLOQUEADA /" >> blocks.log
 cp now.txt state.txt
