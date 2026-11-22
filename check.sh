@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DOMAINS="svmefr.com www.svmefr.com"
+DOMAINS="svmefr.com www.svmefr.com assets.svmefr.com private-assets.svmefr.com"
 URL="https://hayahora.futbol/estado/blocked-any.txt"
 
 curl -fsS --max-time 30 "$URL" -o blocked.txt
